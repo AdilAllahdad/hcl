@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Modern Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1><a href="#" aria-label="StyleHub Home">StyleHub</a></h1>
+            </div>
+            <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero-bg">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Summer Collection 2025</h2>
+                    <p>Discover the latest trends in fashion</p>
+                    <a href="#shop" class="cta-button">Shop Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="products container">
+            <h2>Our Collections</h2>
+            
+            <!-- Category Filters -->
+            <div class="product-categories">
+                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn" data-category="dresses">Dresses</button>
+                <button class="category-btn" data-category="shirts">Shirts</button>
+                <button class="category-btn" data-category="jeans">Jeans</button>
+                <button class="category-btn" data-category="accessories">Accessories</button>
+            </div>
+
+            <!-- Featured Products Section -->
+            <div class="featured-products">
+                <h3 class="section-subtitle">Featured Products</h3>
+                <div class="products-grid">
+                    <article class="product-card" data-category="dresses">
+                        <span class="featured-label">Featured</span>
+                        <span class="category-badge">Dresses</span>
+                        <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Floral Summer Dress - Woman wearing a light blue floral dress in sunlight" loading="lazy">
+                        <div class="product-info">
+                            <h3>Floral Summer Dress</h3>
+                            <p class="product-description">Light and breezy summer dress with floral pattern</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★★</span>
+                                <span class="product-stock">In Stock</span>
+                            </div>
+                            <p class="price">$59.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Floral Summer Dress to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Floral Summer Dress">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="shirts">
+                        <span class="category-badge">Shirts</span>
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casual Linen Shirt - White cotton casual shirt on hanger" loading="lazy">
+                        <div class="product-info">
+                            <h3>Linen Casual Shirt</h3>
+                            <p class="product-description">Classic white linen shirt for a casual look</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★☆</span>
+                                <span class="product-stock">In Stock</span>
+                            </div>
+                            <p class="price">$39.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Linen Casual Shirt to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Linen Casual Shirt">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="jeans">
+                        <span class="featured-label">Featured</span>
+                        <span class="category-badge">Jeans</span>
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Denim Jeans - Classic blue denim jeans" loading="lazy">
+                        <div class="product-info">
+                            <h3>Premium Denim Jeans</h3>
+                            <p class="product-description">High-quality denim jeans with perfect fit</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★★</span>
+                                <span class="product-stock">Low Stock</span>
+                            </div>
+                            <p class="price">$79.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Premium Denim Jeans to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Premium Denim Jeans">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Additional Products -->
+                    <article class="product-card" data-category="dresses">
+                        <span class="category-badge">Dresses</span>
+                        <img src="https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Evening Gown - Elegant black evening dress" loading="lazy">
+                        <div class="product-info">
+                            <h3>Elegant Evening Gown</h3>
+                            <p class="product-description">Sophisticated black evening dress for special occasions</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★★</span>
+                                <span class="product-stock">In Stock</span>
+                            </div>
+                            <p class="price">$129.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Elegant Evening Gown to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Elegant Evening Gown">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="accessories">
+                        <span class="featured-label">Featured</span>
+                        <span class="category-badge">Accessories</span>
+                        <img src="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Leather Handbag - Premium brown leather bag" loading="lazy">
+                        <div class="product-info">
+                            <h3>Premium Leather Handbag</h3>
+                            <p class="product-description">Handcrafted leather bag with elegant design</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★★</span>
+                                <span class="product-stock">In Stock</span>
+                            </div>
+                            <p class="price">$149.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Premium Leather Handbag to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Premium Leather Handbag">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="shirts">
+                        <span class="category-badge">Shirts</span>
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Striped Oxford Shirt - Classic blue and white striped shirt" loading="lazy">
+                        <div class="product-info">
+                            <h3>Striped Oxford Shirt</h3>
+                            <p class="product-description">Classic blue and white striped button-down shirt</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★☆</span>
+                                <span class="product-stock">In Stock</span>
+                            </div>
+                            <p class="price">$45.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Striped Oxford Shirt to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Striped Oxford Shirt">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="accessories">
+                        <span class="category-badge">Accessories</span>
+                        <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classic Watch - Elegant silver watch" loading="lazy">
+                        <div class="product-info">
+                            <h3>Classic Silver Watch</h3>
+                            <p class="product-description">Timeless design with premium craftsmanship</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★★</span>
+                                <span class="product-stock">Limited Stock</span>
+                            </div>
+                            <p class="price">$199.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Classic Silver Watch to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Classic Silver Watch">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="jeans">
+                        <span class="category-badge">Jeans</span>
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Distressed Jeans - Trendy ripped jeans" loading="lazy">
+                        <div class="product-info">
+                            <h3>Distressed Skinny Jeans</h3>
+                            <p class="product-description">Modern distressed jeans with perfect stretch</p>
+                            <div class="product-meta">
+                                <span class="product-rating">★★★★☆</span>
+                                <span class="product-stock">In Stock</span>
+                            </div>
+                            <p class="price">$69.99</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" aria-label="Add Distressed Skinny Jeans to cart">
+                                    Add to Cart
+                                </button>
+                                <button class="quick-view" aria-label="Quick view of Distressed Skinny Jeans">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="loading-indicator" aria-label="Loading products">
+                <div class="spinner"></div>
+            </div>
+        </section>
+
+        <div id="notification" class="notification" role="alert" aria-live="polite"></div>
+        
+        <!-- Cart Modal -->
+        <div class="overlay" id="cartOverlay"></div>
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-modal-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" aria-label="Close cart">×</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total" id="cartTotal">
+                Total: $0.00
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 StyleHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('show');
+        });
+
+        // Smooth scroll navigation
+        document.querySelectorAll('.main-nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return; // Skip if it's just "#"
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.querySelector('.main-nav').classList.remove('show');
+                    
+                    // Smooth scroll to target
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Update active state
+                    document.querySelectorAll('.main-nav a').forEach(a => a.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        // Category filtering
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                productCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                        // Add fade-in animation
+                        card.style.animation = 'fadeIn 0.5s ease-in-out';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Cart functionality
+        let cartCount = 0;
+        let cartItems = [];
+        const cartCountElement = document.querySelector('.cart-count');
+        const notification = document.getElementById('notification');
+        const cartModal = document.getElementById('cartModal');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const cartItemsContainer = document.getElementById('cartItems');
+        const cartTotalElement = document.getElementById('cartTotal');
+
+        // Toggle cart modal
+        document.querySelector('.cart-icon').addEventListener('click', function(e) {
+            e.preventDefault();
+            cartModal.classList.add('show');
+            cartOverlay.classList.add('show');
+        });
+
+        document.querySelector('.close-cart').addEventListener('click', function() {
+            cartModal.classList.remove('show');
+            cartOverlay.classList.remove('show');
+        });
+
+        cartOverlay.addEventListener('click', function() {
+            cartModal.classList.remove('show');
+            cartOverlay.classList.remove('show');
+        });
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productName = productCard.querySelector('h3').textContent;
+                const productPrice = productCard.querySelector('.price').textContent;
+                const productImage = productCard.querySelector('img').src;
+                
+                // Add item to cart array
+                cartItems.push({
+                    name: productName,
+                    price: productPrice,
+                    image: productImage
+                });
+                
+                // Update cart count
+                cartCount++;
+                cartCountElement.textContent = cartCount;
+                
+                // Update cart modal
+                updateCartDisplay();
+                
+                // Show notification
+                notification.textContent = `${productName} added to cart!`;
+                notification.classList.add('show');
+                
+                // Hide notification after 3 seconds
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000);
+            });
+        });
+
+        // Update cart display
+        function updateCartDisplay() {
+            cartItemsContainer.innerHTML = '';
+            let total = 0;
+
+            cartItems.forEach((item, index) => {
+                const price = parseFloat(item.price.replace('$', ''));
+                total += price;
+
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <h3>${item.name}</h3>
+                        <p class="cart-item-price">${item.price}</p>
+                    </div>
+                    <button class="remove-item" data-index="${index}" aria-label="Remove ${item.name} from cart">×</button>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            cartTotalElement.textContent = `Total: $${total.toFixed(2)}`;
+
+            // Add remove functionality
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.dataset.index);
+                    cartItems.splice(index, 1);
+                    cartCount--;
+                    cartCountElement.textContent = cartCount;
+                    updateCartDisplay();
+                });
+            });
+        }
+
+        // Simulate loading state
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelector('.loading-indicator').style.display = 'none';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
